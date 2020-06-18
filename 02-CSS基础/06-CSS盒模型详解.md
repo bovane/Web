@@ -2,6 +2,8 @@
 
 > 本文最初发表于[博客园](http://www.cnblogs.com/smyhvae/p/7256371.html)，并在[GitHub](https://github.com/qianguyihao/Web)上持续更新。以下是正文。
 
+[TOC]
+
 ## 盒子模型
 
 ### 前言
@@ -27,7 +29,7 @@
 
 ![](http://img.smyhvae.com/20170727_2326.png)
 
-上面这个盒子，width:200px; height:200px; 但是真实占有的宽高是302*302。 这是因为还要加上padding、border。
+上面这个盒子，width:200px; height:200px; 但是真实占有的宽高是302*302。<font color=blue> 这是因为还要加上padding、border。</font>
 
 注意：**宽度和真实占有宽度，不是一个概念！**来看下面这例子。
 
@@ -181,7 +183,7 @@ padding:30px 20px 40px 100px;
 
 如果写了四个值，则顺序为：上、右、下、左。
 
-如果只写了三个值，则顺序为：上、右、下。??和右一样。
+<font color=blue>如果只写了三个值，则顺序为：上、右、下。??和右一样。</font>
 
 如果只写了两个值，比如说：
 
@@ -191,7 +193,7 @@ padding: 30px 40px;
 
 则顺序等价于：30px 40px 30px 40px;
 
-要懂得，**用小属性层叠大属性**。比如：
+==要懂得，**用小属性层叠大属性**。比如：==
 
 ```
 padding: 20px;
@@ -289,7 +291,7 @@ padding: 20px;
 
 上图显示，不加任何样式的ul，也是有40px的padding-left。
 
-所以，我们做站的时候，为了便于控制，总是喜欢清除这个默认的padding。
+==所以，我们做站的时候，为了便于控制，总是喜欢清除这个默认的padding。==
 
 可以使用`*`进行清除：
 
@@ -320,12 +322,12 @@ border就是边框。边框有三个要素：像素（粗细）、线型、颜�
 .div1{
 	width: 10px;
 	height: 10px;
-	border: 2px solid red;
+	border: 2px solid red; /* 像素和线型必须写，颜色可省*/
 }
 
 ```
 
-颜色如果不写，默认是黑色。另外两个属性如果不写，则无法显示边框。
+颜色如果不写，默认是黑色。<font color=blue>另外两个属性如果不写，则无法显示边框。</font>
 
 ### border-style
 
@@ -360,7 +362,7 @@ border属性是能够被拆开的，有两大种拆开的方式：
 
 - （2）按方向拆开：border-top、border-right、border-bottom、border-left。
 
-现在我们明白了：**一个border属性，是由三个小属性综合而成的**。如果某一个小属性后面是空格隔开的多个值，那么就是上右下左的顺序。举例如下：
+现在我们明白了：**一个border属性，是由三个小属性综合而成的**。<font color=blue>如果某一个小属性后面是空格隔开的多个值，那么就是上右下左的顺序。举例如下：</font>
 
 ```
 border-width:10px 20px;

@@ -1,13 +1,12 @@
-
-
 > 本文最初发表于[博客园](http://www.cnblogs.com/smyhvae/p/8277895.html)，并在[GitHub](https://github.com/qianguyihao/Web)上持续更新**前端的系列文章**。欢迎在GitHub上关注我，一起入门和进阶前端。
 
 > 以下是正文。
 
+[TOC]
+
 ## background 的常见背景属性
 
-
-**css2.1** 中，常见的背景属性有以下几种：（经常用到，要记住）
+**css2.1** 中，<font color=red>常见的背景属性有以下几种：</font>（经常用到，要记住）
 
 - `background-color:#ff99ff;`  设置元素的背景颜色。
 
@@ -57,7 +56,7 @@ RGBA、HSLA可应用于**所有**使用颜色的地方。
 
 ### 用英语单词表示
 
-能够用英语单词来表述的颜色，都是简单颜色，比如red、green、blue、orange、gray等。代码举例：
+<font color=blue>能够用英语单词来表述的颜色，都是简单颜色</font>，比如red、green、blue、orange、gray等。代码举例：
 
 ```css
 background-color: red;
@@ -66,7 +65,7 @@ background-color: red;
 
 RGB 表示三原色“红”red、“绿”green、“蓝”blue。
 
-光学显示器中，每个像素都是由三原色的发光原件组成的，靠明亮度不同调成不同的颜色的。r、g、b的值，每个值的取值范围0~255，一共256个值。
+==光学显示器中，每个像素都是由三原色的发光原件组成的，靠明亮度不同调成不同的颜色的。==r、g、b的值，每个值的取值范围0~255，一共256个值。
 
 比如红色：
 
@@ -167,7 +166,7 @@ PS:所有用`#`开头的值，都是16进制的。
 	background-color:#123123;
 ```
 
-几种常见的颜色简写可以记住。如下：
+<font color=red>几种常见的颜色简写可以记住</font>。如下：
 
 ```
 	#000   黑

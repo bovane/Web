@@ -3,6 +3,7 @@
 
 > 以下是正文。
 
+[TOC]
 
 ## 伪类（伪类选择器）
 
@@ -10,7 +11,7 @@
 **伪类**：同一个标签，根据其**不同的种状态，有不同的样式**。这就叫做“伪类”。伪类用冒号来表示。
 
 
-比如div是属于box类，这一点很明确，就是属于box类。但是a属于什么类？不明确。因为需要看用户点击前是什么状态，点击后是什么状态。所以，就叫做“伪类”。
+比如div是属于box类，这一点很明确，就是属于box类。==但是a属于什么类？不明确。因为需要看用户点击前是什么状态，点击后是什么状态。所以，就叫做“伪类”。==
 
 
 
@@ -112,17 +113,17 @@ a标签有4种伪类（即对应四种状态），要求背诵。如下：
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Document</title>
 	<style type="text/css">
-		*{
+		*{ /* 通用选择器 */
 			margin: 0;
 			padding: 0;
 		}
-		.nav{
+		.nav{ /* 类选择器 */
 			width: 960px;
 			height: 50px;
 			border: 1px solid red;
 			margin: 100px auto;
 		}
-		.nav ul{
+		.nav ul{ /* 后代选择器 */
 			/*去掉小圆点*/
 			list-style: none;
 		}
@@ -146,7 +147,7 @@ a标签有4种伪类（即对应四种状态），要求背诵。如下：
 			background-color: purple;
 			color:white;
 		}
-		.nav ul li a:hover{
+		.nav ul li a:hover{ /* 伪类 */
 			background-color: orange;
 		}
 	</style>
@@ -168,7 +169,7 @@ a标签有4种伪类（即对应四种状态），要求背诵。如下：
 </html>
 ```
 
-上方代码中，我们发现，当我们在定义`a:link`和 `a:visited`这两个伪类的时候，如果它们的属性相同，我们其实可以写在一起，用逗号隔开就好，摘抄如下：
+上方代码中，我们发现，当我们在定义`a:link`和 `a:visited`这两个伪类的时候，**如果它们的属性相同，我们其实可以写在一起，用逗号隔开就好**，摘抄如下：
 
 ```css
 		.nav ul li a{
@@ -207,7 +208,7 @@ a标签有4种伪类（即对应四种状态），要求背诵。如下：
 
 ```
 
-当然了，在写`a:link`、`a:visited`这两个伪类的时候，要么同时写，要么同时不写。如果只写`a`属性和`a:link`属性，不规范。
+当然了，**在写`a:link`、`a:visited`这两个伪类的时候，要么同时写，要么同时不写**。如果只写`a`属性和`a:link`属性，不规范。
 
 ## 动态伪类举例
 

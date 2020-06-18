@@ -1,5 +1,7 @@
 
 
+[TOC]
+
 ## 前言
 
 > CSS已经学了一些基础内容了，我们来讲解一个小案例吧。以[博雅互动](http://www.boyaa.com/)的官网首页举例。
@@ -60,7 +62,7 @@
             font-family: "Microsoft YaHei","SimSun";
             height: 8888px;
         }
-        .header{
+        .header{ 
             height: 58px;
             background-color: #191D3A;
         }

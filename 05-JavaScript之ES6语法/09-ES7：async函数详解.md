@@ -1,6 +1,8 @@
 
 > 备注： async/await 的内容还有待完善。
 
+[TOC]
+
 ## async/await （异步函数）概述
 
 async/await 是在 ES7 中引入的新语法，可以更加方便地进行异步操作。
