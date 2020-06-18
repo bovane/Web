@@ -49,13 +49,22 @@ typeof 这个运算符的返回结果就是变量的类型。那返回结果的�
 **返回结果举例**：
 
 ```javascript
-console.log(type []); // 空数组的打印结果：object
+console.log(typeof []); // 空数组的打印结果：object
 
-console.log(type {}); // 空对象的打印结果：object
+console.log(typeof {}); // 空对象的打印结果：object
 ```
 
 代码解释：这里的空数组`[]`、空对象`{}` ，为啥他们在使用 typeof 时，返回值也是 `object`呢？因为这里的 返回结果`object`指的是**引用数据类型**。空数组、空对象都是**引用数据类型 Object**。
 
+typeof 无法区分数组，但 instanceof 可以。比如：
+
+```js
+console.log([] instanceof Array); // 打印结果：true
+
+console.log({} instanceof Array); // 打印结果：false
+```
+
+关于 instanceof 的详细内容，以后讲对象的时候，会详细介绍。
 
 
 ## 变量的类型转换的分类
@@ -328,7 +337,7 @@ parseFloat() 的几个特性，可以参照 parseInt()。
 
 ## 转换为 Boolean
 
-将其他的数据类型转换为 Boolean，可以使用 Boolean()函数。情况如下：
+其他的数据类型都可以转换为 Boolean类型。情况如下：
 
 - 情况一：数字 --> 布尔。除了 0 和 NaN，其余的都是 true。也就是说，`Boolean(NaN)`的结果是 false。
 
@@ -340,6 +349,22 @@ parseFloat() 的几个特性，可以参照 parseInt()。
 
 
 PS：转换为 Boolean 的这几种情况，**很重要**，开发中会经常用到。
+
+**1、隐式转换为 Boolean 类型**：
+
+当非 Boolean 类型的数值和 Boolean类型的数值做比较时，会先把前者进行隐式转换为 Boolean类型，然后再做比较。举例如下：
+
+```js
+console.log(1 == true); // 打印结果：true
+console.log(0 == true); // 打印结果：false
+```
+
+**2、显式转换为 Boolean 类型**：
+
+方法1：使用 `!!`可以显式转换为 Boolean 类型。比如 `!!3`的结果是true。
+
+方法2：使用 Boolean()函数可以显式转换为 Boolean 类型。
+
 
 
 
